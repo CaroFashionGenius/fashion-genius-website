@@ -1,0 +1,6 @@
+import type { Metadata } from "next";
+import { Navigation } from "@/components/layout/Navigation";
+import { Footer } from "@/components/layout/Footer";
+import { SITE } from "@/lib/site";
+export const metadata: Metadata={title:"Privacy — Fashion Genius",description:"Privacy information for the Fashion Genius website."};
+export default function Privacy(){return <><Navigation/><main className="legal-page"><p className="section-kicker">LEGAL</p><h1>Privacy</h1><p>Fashion Genius processes contact details submitted through forms or the digital concierge only to respond to enquiries, arrange meetings and manage the requested business relationship.</p><h2>Website data</h2><p>Essential storage is used for language and consent preferences. Optional analytics should only be activated after consent. The website does not require an account; Creator Studio has its own account and product privacy flow.</p><h2>Your rights</h2><p>You may request access, correction or deletion of personal data by contacting <a href={`mailto:${SITE.founderEmail}`}>{SITE.founderEmail}</a>.</p><p className="legal-note">This operational privacy page must be reviewed against the final legal entity, hosting, analytics and CRM configuration before production launch.</p></main><Footer/></>}

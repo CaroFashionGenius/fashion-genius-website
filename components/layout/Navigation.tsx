@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { SITE } from "@/lib/site";
 import { Button } from "@/components/ui/Button";
+import { LanguageToggle } from "@/components/layout/LanguageToggle";
 
 export function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -19,7 +20,7 @@ export function Navigation() {
       </div>
       <a href="/#intelligence">Intelligence</a><a href="/creator-studio/#pricing">Creator Pricing</a><a href="/#vision">Vision</a><a href="/#founder">Company</a>
     </nav>
-    <div className="header-actions"><a className="text-link desktop-only" href={SITE.creatorStudioUrl}>Login</a><Button href={SITE.creatorStudioUrl}>Launch Creator Studio ↗</Button><button className="mobile-toggle" aria-label="Toggle menu" aria-expanded={mobileOpen} onClick={() => setMobileOpen(v => !v)}>☰</button></div>
+    <div className="header-actions"><LanguageToggle/><a className="text-link desktop-only" href={SITE.creatorStudioUrl}>Login</a><Button href={SITE.creatorStudioUrl}>Launch Creator Studio ↗</Button><button className="mobile-toggle" aria-label="Toggle menu" aria-expanded={mobileOpen} onClick={() => setMobileOpen(v => !v)}>☰</button></div>
     {mobileOpen && <nav className="mobile-nav" aria-label="Mobile navigation"><a href="/#platform">Platform</a><a href="/creator-studio/">Creator Studio</a><a href="/retail-platform/">Retail Platform</a><a href="/#intelligence">Intelligence</a><a href="/creator-studio/#pricing">Creator Pricing</a><a href="/#founder">Company</a></nav>}
   </header>;
 }
