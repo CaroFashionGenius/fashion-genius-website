@@ -1,45 +1,51 @@
-# Fashion Genius Enterprise Website — Sprint 1
+# Fashion Genius Enterprise Website — Sprint 2
 
-Sprint 1 contains:
+Static HTML/CSS/JavaScript website for Cloudflare Pages.
 
-- Enterprise navigation and Products mega menu
-- Cinematic hero with silver light sweep
-- Clear scroll-to-enter cue
-- Platform story: one brand, two products
-- Creator Studio product introduction
-- Responsive desktop and mobile layouts
-- Basic SEO, schema, robots.txt, sitemap and Google verification file
+## Sprint 2 includes
 
-## Preview locally
-
-Open `index.html` in a browser, or run a local server:
-
-```bash
-python3 -m http.server 8000
-```
-
-Then open `http://localhost:8000`.
+- Expanded platform story
+- Creator Studio product showcase
+- Real product screenshots for plans, credits, billing and invoices
+- End-to-end creator workflow storytelling
+- Retail Platform enterprise entry
+- AI Agents, Analytics, CRM and Business Intelligence section
+- Platform benefits
+- Professional digital concierge UI
+- FAQ intent responses
+- Meeting booking hook
+- Founder escalation fallback
 
 ## Upload to GitHub
 
-1. Open the new repository `fashion-genius-enterprise`.
-2. Choose **Add file → Upload files**.
-3. Upload the CONTENTS of this folder, not the ZIP file.
-4. Commit message: `Sprint 1: enterprise navigation hero and platform story`.
-5. Commit directly to `main`.
+Upload all files and the `assets` folder to the root of the existing repository.
+Commit suggestion:
 
-## Connect to Cloudflare Pages
+`Sprint 2: product showcase intelligence retail and concierge`
 
-1. Cloudflare → Workers & Pages → Create → Pages → Connect to Git.
-2. Select `fashion-genius-enterprise`.
-3. Production branch: `main`.
-4. Framework preset: `None`.
-5. Build command: leave empty (or use `exit 0`).
-6. Build output directory: `/`.
-7. Deploy.
+Cloudflare Pages will deploy automatically after the commit.
 
-Cloudflare will create a preview URL similar to:
+## Concierge configuration
 
-`https://fashion-genius-enterprise.pages.dev`
+Open `script.js` and find:
 
-Do not connect `fashion-genius.com` until the complete site is approved.
+```js
+const CONCIERGE_CONFIG = {
+  bookingUrl: '',
+  founderEmail: 'caroline.steiger@fashion-genius.com'
+};
+```
+
+Add the final Google Appointment Schedule or Calendly URL to `bookingUrl`.
+
+The included concierge answers standard questions locally. A true real-time founder chat requires a live-chat provider such as Intercom, Crisp, HubSpot Chat or Tawk.to. The current escalation path opens a prefilled founder email for exceptional questions; it does not falsely claim that Caroline is online.
+
+## Files
+
+- `index.html`
+- `styles.css`
+- `script.js`
+- `assets/`
+- `robots.txt`
+- `sitemap.xml`
+- Google verification file
