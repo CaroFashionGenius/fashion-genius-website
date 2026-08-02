@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fashion-genius.com/sitemap.xml
