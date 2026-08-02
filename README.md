@@ -1,45 +1,53 @@
-# Fashion Genius Design System v1.0 — Release 1.0 Foundation
+# Fashion Genius Design System v1.0 — Release 1.1 Motion & Experience
 
-Production foundation for the Fashion Genius enterprise website.
+Production-grade Next.js foundation with a cinematic motion layer for the Fashion Genius enterprise website.
 
 ## Included
+
 - Next.js App Router + React + TypeScript
 - Static export for Cloudflare Pages
-- Central design tokens in `app/globals.css`
-- Reusable layout, section and UI components
-- Creator Studio, Retail Platform, Intelligence, Pricing, Comparison, ROI, Founder and Concierge foundations
-- SEO metadata, JSON-LD, sitemap and robots
+- Framer Motion for loading, scroll progress and viewport reveals
+- GSAP + ScrollTrigger for hero choreography, cinematic parallax and product reveals
+- Reduced-motion accessibility support
+- Animated navigation, product cards, platform flow and founder experience
+- Existing Release 1.0 design system, content and assets
 
 ## Local preview
+
 ```bash
 npm install
 npm run dev
 ```
-Open http://localhost:3000
+
+Open `http://localhost:3000`.
 
 ## Production build
+
 ```bash
 npm run build
 ```
+
 The static output is generated in `out/`.
 
 ## GitHub
-Upload the complete project to the `nextjs-rebuild` branch. Commit suggestion:
-`Release 1.0: Next.js foundation and Fashion Genius design system`
 
-## Cloudflare Pages (after the files are in the branch)
-- Framework preset: Next.js (Static HTML Export) or None
+Upload the complete project to the `nextjs-rebuild` branch. Commit suggestion:
+
+`Release 1.1: cinematic motion GSAP and Framer Motion`
+
+## Cloudflare Pages
+
+- Framework preset: None
 - Build command: `npm run build`
 - Build output directory: `out`
-- Root directory: `/`
-- Node version: 22
+- Root directory: empty
+- Environment variable: `NODE_VERSION=22`
 
-Do not change the production domain until the branch preview has been reviewed.
+## Motion architecture
 
-## Release roadmap
-- 1.0 Foundation — current
-- 1.1 Motion & Experience
-- 1.2 Creator Studio product page
-- 1.3 Retail Platform
-- 1.4 AI Concierge & integrations
-- 1.5 Launch Ready
+- `components/motion/LoadingScreen.tsx`
+- `components/motion/ScrollProgress.tsx`
+- `components/motion/MotionProvider.tsx`
+- `components/motion/Reveal.tsx`
+- `components/motion/Parallax.tsx`
+- GSAP hero sequence in `components/sections/Hero.tsx`

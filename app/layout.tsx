@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { SITE } from "@/lib/site";
+import { LoadingScreen } from "@/components/motion/LoadingScreen";
+import { MotionProvider } from "@/components/motion/MotionProvider";
+import { ScrollProgress } from "@/components/motion/ScrollProgress";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -31,6 +34,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body>
+        <LoadingScreen />
+        <ScrollProgress />
+        <MotionProvider />
         <a className="skip-link" href="#main">Skip to content</a>
         {children}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
