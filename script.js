@@ -215,3 +215,9 @@ document.querySelectorAll('.accordion-item button').forEach((button) => {
     button.setAttribute('aria-expanded', String(open));
   });
 });
+
+// Sprint 5: refined sticky header state.
+const stickyHeader = document.querySelector('[data-header]');
+const updateHeaderState = () => stickyHeader?.classList.toggle('scrolled', window.scrollY > 24);
+window.addEventListener('scroll', updateHeaderState, { passive: true });
+updateHeaderState();
