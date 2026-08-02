@@ -1,26 +1,45 @@
-# Fashion Genius Enterprise Website — Sprint 5
+# Fashion Genius Design System v1.0 — Release 1.0 Foundation
 
-Sprint 5 completes the public-facing foundation:
+Production foundation for the Fashion Genius enterprise website.
 
-- Founder letter with Caroline Steiger portrait and signature
-- Full enterprise corporate footer
-- Privacy, Terms and Imprint foundation pages
-- Expanded Open Graph, Twitter and structured-data metadata
-- Sticky-header polish, responsive refinement and reduced-motion support
-- Existing Sprints 1–4 retained: platform, Creator Studio, intelligence, retail, pricing, ROI and concierge
+## Included
+- Next.js App Router + React + TypeScript
+- Static export for Cloudflare Pages
+- Central design tokens in `app/globals.css`
+- Reusable layout, section and UI components
+- Creator Studio, Retail Platform, Intelligence, Pricing, Comparison, ROI, Founder and Concierge foundations
+- SEO metadata, JSON-LD, sitemap and robots
 
-## Deploy
+## Local preview
+```bash
+npm install
+npm run dev
+```
+Open http://localhost:3000
 
-Upload all files and the complete `assets` folder to the root of the GitHub repository. Commit directly to `main`. Cloudflare Pages deploys automatically.
+## Production build
+```bash
+npm run build
+```
+The static output is generated in `out/`.
 
-Suggested commit message:
+## GitHub
+Upload the complete project to the `nextjs-rebuild` branch. Commit suggestion:
+`Release 1.0: Next.js foundation and Fashion Genius design system`
 
-`Sprint 5: founder corporate footer SEO performance and final polish`
+## Cloudflare Pages (after the files are in the branch)
+- Framework preset: Next.js (Static HTML Export) or None
+- Build command: `npm run build`
+- Build output directory: `out`
+- Root directory: `/`
+- Node version: 22
 
-## Required before final production launch
+Do not change the production domain until the branch preview has been reviewed.
 
-1. Replace provisional legal text with reviewed Privacy, Terms and complete Swiss imprint details.
-2. Add Caroline's production booking URL in `script.js` (`CONCIERGE_CONFIG.bookingUrl`).
-3. Add approved social profile URLs to the Organization structured data and footer when available.
-4. Confirm final company legal name and registry information.
-5. Confirm all public plan prices and Stripe configuration.
+## Release roadmap
+- 1.0 Foundation — current
+- 1.1 Motion & Experience
+- 1.2 Creator Studio product page
+- 1.3 Retail Platform
+- 1.4 AI Concierge & integrations
+- 1.5 Launch Ready
