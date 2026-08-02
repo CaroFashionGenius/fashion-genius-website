@@ -1,16 +1,20 @@
-# Fashion Genius Design System v1.0 — Release 1.1 Motion & Experience
+# Fashion Genius Design System v1.0 — Release 1.2 Creator Studio
 
-Production-grade Next.js foundation with a cinematic motion layer for the Fashion Genius enterprise website.
+Production-ready Next.js foundation with the dedicated Creator Studio product experience.
 
 ## Included
 
-- Next.js App Router + React + TypeScript
-- Static export for Cloudflare Pages
-- Framer Motion for loading, scroll progress and viewport reveals
-- GSAP + ScrollTrigger for hero choreography, cinematic parallax and product reveals
-- Reduced-motion accessibility support
-- Animated navigation, product cards, platform flow and founder experience
-- Existing Release 1.0 design system, content and assets
+- Everything from Release 1.0 Foundation and Release 1.1 Motion
+- Dedicated `/creator-studio/` product page
+- Cinematic Creator Studio hero and product interface presentation
+- Benefit architecture and professional creator workflow
+- Product gallery using current Creator Studio references
+- Credit-system explanation aligned with the Phase 2 monetisation baseline
+- Free, Creator, Pro, Studio and Enterprise pricing
+- Full plan-comparison table
+- Founding Creator programme presentation
+- Capacity advisor, common questions and final conversion CTA
+- Responsive layouts and reduced-motion support
 
 ## Local preview
 
@@ -19,7 +23,7 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:3000`.
+Open `http://localhost:3000/creator-studio/`.
 
 ## Production build
 
@@ -27,27 +31,20 @@ Open `http://localhost:3000`.
 npm run build
 ```
 
-The static output is generated in `out/`.
+Static output is generated in `out/` for Cloudflare Pages.
 
 ## GitHub
 
-Upload the complete project to the `nextjs-rebuild` branch. Commit suggestion:
+Upload the complete project to the `nextjs-rebuild` branch.
 
-`Release 1.1: cinematic motion GSAP and Framer Motion`
+Suggested commit:
+
+`Release 1.2: Creator Studio product experience`
 
 ## Cloudflare Pages
 
 - Framework preset: None
 - Build command: `npm run build`
 - Build output directory: `out`
-- Root directory: empty
+- Root directory: blank
 - Environment variable: `NODE_VERSION=22`
-
-## Motion architecture
-
-- `components/motion/LoadingScreen.tsx`
-- `components/motion/ScrollProgress.tsx`
-- `components/motion/MotionProvider.tsx`
-- `components/motion/Reveal.tsx`
-- `components/motion/Parallax.tsx`
-- GSAP hero sequence in `components/sections/Hero.tsx`

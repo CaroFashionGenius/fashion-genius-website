@@ -7,9 +7,9 @@ export const SITE = {
 } as const;
 
 export const plans = [
-  { name: "Free", price: "€0", credits: "20", collections: "2", uploads: "20/month", processing: "Standard", export: "Standard", analytics: "—", seats: "1" },
-  { name: "Creator", price: "€19", credits: "250", collections: "25", uploads: "Unlimited", processing: "Fast", export: "HD", analytics: "Basic", seats: "1" },
-  { name: "Pro", price: "€49", credits: "1,000", collections: "Unlimited", uploads: "Unlimited", processing: "Priority", export: "4K", analytics: "Advanced", seats: "3" },
-  { name: "Studio", price: "€99", credits: "2,500", collections: "Unlimited", uploads: "Unlimited", processing: "Highest", export: "Premium", analytics: "Advanced + Insights", seats: "10" },
-  { name: "Enterprise", price: "Custom", credits: "Custom", collections: "Unlimited", uploads: "Unlimited", processing: "Dedicated", export: "Custom", analytics: "Full + API", seats: "Custom" },
+  { name: "Free", price: "€0", credits: "20", watermark: "Yes", collections: "2", uploads: "20/month", processing: "Standard", history: "Basic", export: "Standard", analytics: "No", support: "Community", earlyAccess: "No", integrations: "No", commercialRights: "Limited", seats: "1" },
+  { name: "Creator", price: "€19", credits: "250", watermark: "No", collections: "25", uploads: "Unlimited", processing: "Fast", history: "Full", export: "HD", analytics: "Basic", support: "Priority", earlyAccess: "No", integrations: "No", commercialRights: "Included", seats: "1" },
+  { name: "Pro", price: "€49", credits: "1,000", watermark: "No", collections: "Unlimited", uploads: "Unlimited", processing: "Priority", history: "Advanced", export: "4K", analytics: "Advanced", support: "Priority+", earlyAccess: "Yes", integrations: "Limited", commercialRights: "Included", seats: "3" },
+  { name: "Studio", price: "€99", credits: "2,500", watermark: "No", collections: "Unlimited", uploads: "Unlimited", processing: "Highest", history: "Advanced + Insights", export: "Premium", analytics: "Advanced", support: "Priority+", earlyAccess: "Yes", integrations: "Limited", commercialRights: "Included", seats: "10" },
+  { name: "Enterprise", price: "Custom", credits: "Custom", watermark: "No", collections: "Unlimited", uploads: "Unlimited", processing: "Dedicated", history: "Full + API", export: "Custom", analytics: "Full + API", support: "Dedicated", earlyAccess: "Custom", integrations: "Full API", commercialRights: "Custom", seats: "Custom" },
 ] as const;

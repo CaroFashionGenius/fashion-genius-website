@@ -1,0 +1,6 @@
+const modules = [
+  { kicker:"CREATE", title:"Virtual Try-On Studio", copy:"Pair models and garments, preview the composition and generate professional fashion imagery.", image:"/assets/experience-reference.png" },
+  { kicker:"OPERATE", title:"Plans, credits and usage", copy:"Manage recurring plan credits, purchased credits, billing activity and transparent usage from one place.", image:"/assets/creator-billing-ui.png" },
+  { kicker:"SCALE", title:"Pricing and team capacity", copy:"Move from individual production to professional creator and team workflows without changing platforms.", image:"/assets/creator-pricing-ui.png" },
+];
+export function CreatorProductGallery(){return <section className="section section-light creator-gallery-section"><div className="section-shell"><p className="section-kicker">THE PRODUCT</p><h2 className="display">A workspace designed<br/>for real production.</h2><div className="creator-gallery">{modules.map((m,i)=><article data-gsap-reveal className={i%2?"creator-gallery-item reverse":"creator-gallery-item"} key={m.title}><div className="creator-gallery-copy"><small>{m.kicker}</small><h3>{m.title}</h3><p>{m.copy}</p></div><div className="creator-gallery-visual"><img src={m.image} alt={`${m.title} interface`} loading="lazy"/></div></article>)}</div></div></section>}
