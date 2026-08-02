@@ -2,8 +2,9 @@ export const SITE = {
   name: "Fashion Genius",
   url: "https://fashion-genius.com",
   creatorStudioUrl: "https://creatorstudio.fashion-genius.com",
-  founderEmail: "caroline.steiger@fashion-genius.com",
-  bookingUrl: "",
+  founderEmail: process.env.NEXT_PUBLIC_FOUNDER_EMAIL || "caroline.steiger@fashion-genius.com",
+  bookingUrl: process.env.NEXT_PUBLIC_BOOKING_URL || "",
+  conciergeWebhookUrl: process.env.NEXT_PUBLIC_CONCIERGE_WEBHOOK_URL || "",
 } as const;
 
 export const plans = [
