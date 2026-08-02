@@ -72,7 +72,11 @@ const answers = [
   },
   {
     match: ['retail', 'retailer', 'brand', 'enterprise'],
-    text: 'The Retail Platform is the enterprise path for fashion brands and retailers. It is designed around AI commerce, product discovery, personalisation, catalogue integration and commercial intelligence. Engagements begin with a focused enterprise conversation or pilot.'
+    text: 'The Retail Platform is the enterprise path for fashion brands and retailers. It connects product discovery, personalisation, omnichannel journeys, catalogue context, CRM workflows and commercial intelligence. Engagements begin with one focused use case and measurable pilot criteria.'
+  },
+  {
+    match: ['omnichannel', 'commerce engine', 'shopper journey', 'personalisation'],
+    text: 'Fashion Genius is designed to connect shopper intent across social, online, AI-assisted and store journeys. The AI Commerce Engine turns behaviour, product context and commercial signals into relevant recommendations, next actions and measurable learning loops.'
   },
   {
     match: ['analytics', 'business intelligence', 'dashboard'],
