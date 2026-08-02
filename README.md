@@ -1,33 +1,29 @@
-# Fashion Genius Enterprise Website — Sprint 2
+# Fashion Genius Enterprise Website — Sprint 3
 
-Static HTML/CSS/JavaScript website for Cloudflare Pages.
+Static HTML/CSS/JavaScript release for Cloudflare Pages.
 
-## Sprint 2 includes
+## Included
 
-- Expanded platform story
-- Creator Studio product showcase
-- Real product screenshots for plans, credits, billing and invoices
-- End-to-end creator workflow storytelling
-- Retail Platform enterprise entry
-- AI Agents, Analytics, CRM and Business Intelligence section
-- Platform benefits
-- Professional digital concierge UI
-- FAQ intent responses
-- Meeting booking hook
-- Founder escalation fallback
+- All Sprint 1 and Sprint 2 sections
+- Creator Studio pricing aligned to the Phase 2 Monetization Briefing
+- Free, Creator, Pro, Studio and Enterprise plans
+- Founding Creator programme banner
+- Expandable full plan-comparison table
+- Interactive production ROI / capacity calculator
+- Common Questions accordion
+- Updated Fashion Genius Concierge plan answers
 
-## Upload to GitHub
+## Deploy
 
-Upload all files and the `assets` folder to the root of the existing repository.
-Commit suggestion:
+Upload the contents of this folder to the root of the GitHub repository connected to Cloudflare Pages. Commit directly to `main`. Cloudflare will redeploy automatically.
 
-`Sprint 2: product showcase intelligence retail and concierge`
+Suggested commit message:
 
-Cloudflare Pages will deploy automatically after the commit.
+`Sprint 3: pricing comparison ROI calculator and common questions`
 
-## Concierge configuration
+## Important configuration
 
-Open `script.js` and find:
+In `script.js`, add the booking URL when available:
 
 ```js
 const CONCIERGE_CONFIG = {
@@ -35,17 +31,3 @@ const CONCIERGE_CONFIG = {
   founderEmail: 'caroline.steiger@fashion-genius.com'
 };
 ```
-
-Add the final Google Appointment Schedule or Calendly URL to `bookingUrl`.
-
-The included concierge answers standard questions locally. A true real-time founder chat requires a live-chat provider such as Intercom, Crisp, HubSpot Chat or Tawk.to. The current escalation path opens a prefilled founder email for exceptional questions; it does not falsely claim that Caroline is online.
-
-## Files
-
-- `index.html`
-- `styles.css`
-- `script.js`
-- `assets/`
-- `robots.txt`
-- `sitemap.xml`
-- Google verification file

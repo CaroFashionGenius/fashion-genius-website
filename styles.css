@@ -282,3 +282,77 @@ button { font: inherit; }
   .concierge-label { display: none; }
   .concierge { right: 8px; bottom: 74px; width: calc(100vw - 16px); height: min(620px,calc(100vh - 92px)); }
 }
+
+/* Sprint 3 — Pricing, comparison, ROI and common questions */
+.pricing-section { background:#0b0d0f; color:#f2f0ea; }
+.pricing-head { display:grid; grid-template-columns:1fr .72fr; gap:100px; align-items:end; }
+.pricing-intro { color:#a9adb2; font-size:18px; line-height:1.75; max-width:620px; }
+.pricing-note { margin-top:20px; padding-top:20px; border-top:1px solid var(--line-dark); font-size:12px; color:#777c82; }
+.founding-banner { margin:72px 0 34px; padding:25px 28px; border:1px solid var(--line-dark); display:flex; justify-content:space-between; align-items:center; gap:30px; }
+.founding-banner div { display:grid; gap:7px; }
+.founding-banner small { font-size:9px; letter-spacing:.24em; color:#8d9298; }
+.founding-banner strong { font-family:Georgia,serif; font-size:25px; font-weight:400; }
+.founding-banner span { color:#91969c; font-size:12px; }
+.pricing-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:12px; }
+.price-card { min-height:590px; border:1px solid var(--line-dark); padding:27px 24px 22px; display:flex; flex-direction:column; background:#101316; }
+.price-card-featured { background:#ece9e2; color:#101214; border-color:#ece9e2; transform:translateY(-10px); }
+.price-card-enterprise { background:#14171a; }
+.price-card-top { min-height:145px; }
+.price-card .card-label { color:#777c82; font-size:9px; letter-spacing:.2em; }
+.price-card h3 { margin:11px 0 8px; font-family:Georgia,serif; font-size:34px; font-weight:400; }
+.price-card-top > p:last-child { color:#858a90; font-size:12px; line-height:1.55; }
+.price-card-featured .price-card-top > p:last-child,.price-card-featured .card-label { color:#666a6f; }
+.price { display:grid; gap:3px; padding:22px 0; border-top:1px solid currentColor; border-bottom:1px solid rgba(128,128,128,.35); }
+.price strong { font-size:32px; font-weight:500; }
+.price span { color:#7d8288; font-size:11px; }
+.credit-line { margin:20px 0; color:#aeb2b7; font-size:12px; }
+.price-card-featured .credit-line { color:#5f6368; }
+.credit-line strong { color:inherit; font-size:22px; margin-right:5px; }
+.price-card ul { list-style:none; display:grid; gap:13px; margin:0 0 26px; padding:0; color:#c1c4c7; font-size:12px; line-height:1.35; }
+.price-card-featured ul { color:#373a3d; }
+.price-card li::before { content:'✓'; margin-right:9px; color:#8f949a; }
+.plan-button { margin-top:auto; border:1px solid rgba(255,255,255,.26); color:inherit; padding:15px 16px; display:flex; justify-content:space-between; font-size:11px; }
+.price-card-featured .plan-button { border-color:#1c1e21; }
+.plan-button-light { background:#111316; color:white!important; }
+.comparison-wrap { margin-top:110px; border-top:1px solid var(--line-dark); }
+.comparison-heading { padding:34px 0; display:flex; align-items:end; justify-content:space-between; gap:30px; }
+.comparison-heading h3 { font-family:Georgia,serif; font-size:34px; font-weight:400; margin-top:8px; }
+.comparison-toggle { border:0; border-bottom:1px solid #555b61; background:transparent; color:#d4d6d8; padding:10px 0; cursor:pointer; }
+.comparison-toggle span { margin-left:12px; }
+.comparison-scroller { overflow-x:auto; max-height:340px; transition:max-height .5s ease; }
+.comparison-scroller.expanded { max-height:1100px; }
+.comparison-table { width:100%; min-width:900px; border-collapse:collapse; font-size:12px; }
+.comparison-table th,.comparison-table td { padding:17px 14px; border-bottom:1px solid var(--line-dark); text-align:left; }
+.comparison-table thead th { color:#f4f2ed; font-size:10px; letter-spacing:.14em; }
+.comparison-table tbody th { color:#a7abb0; font-weight:400; }
+.comparison-table td { color:#d0d2d4; }
+.roi-layout { display:grid; grid-template-columns:.72fr 1.28fr; gap:100px; align-items:start; }
+.calculator-disclaimer { margin-top:35px; font-size:10px; color:#74787c; line-height:1.6; }
+.roi-calculator { background:#f2efe8; border:1px solid rgba(16,18,20,.14); padding:35px; }
+.roi-inputs { display:grid; gap:31px; }
+.roi-inputs label { display:grid; grid-template-columns:1fr auto; gap:12px; color:#33363a; font-size:12px; }
+.roi-inputs output { font-family:Georgia,serif; font-size:20px; }
+.roi-inputs input { grid-column:1/-1; width:100%; accent-color:#151719; }
+.roi-results { margin-top:40px; display:grid; grid-template-columns:.85fr 1.15fr; gap:15px; }
+.recommendation-card { padding:28px; background:#111315; color:#f2f0ea; display:flex; flex-direction:column; min-height:250px; }
+.recommendation-card small { color:#797e84; letter-spacing:.18em; font-size:8px; }
+.recommendation-card strong { font-family:Georgia,serif; font-size:48px; font-weight:400; margin:25px 0 6px; }
+.recommendation-card span { color:#a2a6ab; font-size:11px; }
+.recommendation-card a { margin-top:auto; font-size:11px; }
+.roi-metrics { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.roi-metrics div { padding:19px; border:1px solid rgba(16,18,20,.12); background:#e9e5dd; display:flex; flex-direction:column; justify-content:space-between; min-height:115px; }
+.roi-metrics small { color:#777b80; font-size:8px; letter-spacing:.12em; }
+.roi-metrics strong { font-family:Georgia,serif; font-size:25px; font-weight:400; }
+.questions-layout { display:grid; grid-template-columns:.65fr 1.35fr; gap:110px; }
+.questions-intro > p:last-child { margin-top:32px; color:#6c7075; font-size:13px; line-height:1.7; max-width:380px; }
+.accordion { border-top:1px solid var(--line-light); }
+.accordion-item { border-bottom:1px solid var(--line-light); }
+.accordion-item button { width:100%; border:0; background:transparent; color:var(--ink); padding:22px 0; display:flex; justify-content:space-between; align-items:center; cursor:pointer; text-align:left; font-size:14px; }
+.accordion-item button i { font-style:normal; transition:transform .3s ease; }
+.accordion-item > div { display:grid; grid-template-rows:0fr; transition:grid-template-rows .35s ease; }
+.accordion-item > div p { overflow:hidden; color:#696d72; font-size:13px; line-height:1.7; margin:0; max-width:730px; }
+.accordion-item.open > div { grid-template-rows:1fr; }
+.accordion-item.open > div p { padding:0 0 24px; }
+.accordion-item.open button i { transform:rotate(45deg); }
+@media(max-width:1180px){.pricing-grid{grid-template-columns:repeat(2,1fr)}.price-card-featured{transform:none}.price-card-enterprise{grid-column:span 2}.pricing-head,.roi-layout,.questions-layout{grid-template-columns:1fr;gap:50px}}
+@media(max-width:720px){.founding-banner,.comparison-heading{align-items:flex-start;flex-direction:column}.pricing-grid{grid-template-columns:1fr}.price-card-enterprise{grid-column:auto}.price-card{min-height:auto}.roi-calculator{padding:23px 18px}.roi-results{grid-template-columns:1fr}.roi-metrics{grid-template-columns:1fr}.comparison-wrap{margin-top:70px}}

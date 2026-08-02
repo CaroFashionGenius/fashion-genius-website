@@ -84,7 +84,7 @@ const answers = [
   },
   {
     match: ['price', 'pricing', 'plan', 'plans'],
-    text: 'Creator Studio uses a credit-based subscription architecture with Free, Creator, Pro, Studio and tailored Enterprise plans. Full pricing and the plan comparison will be added in the next website sprint and remain aligned with the implemented monetisation briefing.'
+    text: 'Creator Studio offers Free (€0 / 20 credits), Creator (€19 / 250 credits), Pro (€49 / 1,000 credits), Studio (€99 / 2,500 credits) and tailored Enterprise plans. The public pricing and full plan comparison are available in the Pricing section.'
   }
 ];
 
@@ -156,4 +156,58 @@ chatForm?.addEventListener('submit', (event) => {
 
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') setChatOpen(false);
+});
+
+
+// Sprint 3: plan comparison, ROI calculator and question accordion.
+const comparisonToggle = document.querySelector('[data-comparison-toggle]');
+const comparisonPanel = document.querySelector('[data-comparison-panel]');
+comparisonToggle?.addEventListener('click', () => {
+  const expanded = comparisonPanel?.classList.toggle('expanded');
+  comparisonToggle.setAttribute('aria-expanded', String(Boolean(expanded)));
+  comparisonToggle.innerHTML = expanded ? 'Collapse comparison <span>−</span>' : 'View full comparison <span>＋</span>';
+});
+
+const euro = new Intl.NumberFormat('en-IE', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
+const integer = new Intl.NumberFormat('en-IE');
+const calculator = document.querySelector('[data-roi-calculator]');
+if (calculator) {
+  const campaigns = calculator.querySelector('[data-campaigns]');
+  const cost = calculator.querySelector('[data-cost]');
+  const generations = calculator.querySelector('[data-generations]');
+  const plans = [
+    { name: 'Free', credits: 20, price: 0 },
+    { name: 'Creator', credits: 250, price: 19 },
+    { name: 'Pro', credits: 1000, price: 49 },
+    { name: 'Studio', credits: 2500, price: 99 },
+    { name: 'Enterprise', credits: Infinity, price: null }
+  ];
+  const updateCalculator = () => {
+    const campaignCount = Number(campaigns.value);
+    const costPerCampaign = Number(cost.value);
+    const generationsPerCampaign = Number(generations.value);
+    const credits = campaignCount * generationsPerCampaign;
+    const plan = plans.find((item) => credits <= item.credits) || plans.at(-1);
+    const traditionalBudget = campaignCount * costPerCampaign;
+    const planPrice = plan.price;
+    calculator.querySelector('[data-campaign-output]').textContent = integer.format(campaignCount);
+    calculator.querySelector('[data-cost-output]').textContent = euro.format(costPerCampaign);
+    calculator.querySelector('[data-generation-output]').textContent = integer.format(generationsPerCampaign);
+    calculator.querySelector('[data-plan-name]').textContent = plan.name;
+    calculator.querySelector('[data-plan-reason]').textContent = planPrice === null ? 'Tailored AI credits · custom commercial terms' : `${integer.format(plan.credits)} AI credits · ${euro.format(planPrice)} / month`;
+    calculator.querySelector('[data-credit-total]').textContent = integer.format(credits);
+    calculator.querySelector('[data-traditional-total]').textContent = euro.format(traditionalBudget);
+    calculator.querySelector('[data-plan-price]').textContent = planPrice === null ? 'Custom' : euro.format(planPrice);
+    calculator.querySelector('[data-savings]').textContent = planPrice === null ? 'Discuss scope' : euro.format(Math.max(0, traditionalBudget - planPrice));
+  };
+  [campaigns, cost, generations].forEach((input) => input.addEventListener('input', updateCalculator));
+  updateCalculator();
+}
+
+document.querySelectorAll('.accordion-item button').forEach((button) => {
+  button.addEventListener('click', () => {
+    const item = button.closest('.accordion-item');
+    const open = item.classList.toggle('open');
+    button.setAttribute('aria-expanded', String(open));
+  });
 });
