@@ -1,0 +1,2 @@
+import { SITE } from "@/lib/site";
+export function RetailCTA(){return <section className="retail-final-cta"><div><p className="eyebrow">FASHION GENIUS RETAIL PLATFORM</p><h2>Build the next<br/><em>commerce advantage.</em></h2><p>Bring your priority retail challenge. We will frame the opportunity, the pilot and the path to measurable value.</p><a className="button button-light" href={`mailto:${SITE.founderEmail}?subject=Retail%20Platform%20Strategy%20Conversation`}>Start the conversation ↗</a></div></section>}
