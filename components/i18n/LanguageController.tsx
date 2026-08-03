@@ -8,7 +8,6 @@ const translations: Record<string, string> = {
   "Skip to content": "Zum Inhalt springen",
   "Platform": "Plattform",
   "Products": "Produkte",
-  "Intelligence": "Intelligenz",
   "Creator Pricing": "Creator-Preise",
   "Vision": "Vision",
   "Company": "Unternehmen",
