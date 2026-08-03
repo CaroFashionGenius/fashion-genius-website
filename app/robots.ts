@@ -1,2 +1,18 @@
 import type { MetadataRoute } from "next";
-export default function robots(): MetadataRoute.Robots { return { rules: { userAgent: "*", allow: "/" }, sitemap: "https://fashion-genius.com/sitemap.xml" }; }
+
+export const dynamic = "force-static";
+
+export default function robots(): MetadataRoute.Robots {
+  const baseUrl = "https://fashion-genius.com";
+
+  return {
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+      },
+    ],
+    sitemap: `${baseUrl}/sitemap.xml`,
+    host: baseUrl,
+  };
+}
