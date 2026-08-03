@@ -58,7 +58,6 @@ const translations: Record<string, string> = {
   "Customer, campaign and revenue intelligence": "Customer-, Kampagnen- und Revenue-Intelligence",
   "CRM & revenue workflows": "CRM- und Revenue-Workflows",
   "AI AGENTS · ANALYTICS · CRM": "AI AGENTS · ANALYTICS · CRM",
-  "Retail Platform": "Retail Platform",
   "Connect commerce.": "Commerce verbinden.",
   "Connect discovery, personalisation and commerce intelligence across fashion retail journeys.": "Discovery, Personalisierung und Commerce Intelligence über die gesamte Fashion-Retail-Journey verbinden.",
   "Discuss an enterprise pilot ↗": "Enterprise-Pilot besprechen ↗",
