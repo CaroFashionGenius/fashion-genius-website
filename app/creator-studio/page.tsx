@@ -80,13 +80,13 @@ export default function CreatorStudioPage() {
             <span /><span /><span />
             <div>creatorstudio.fashion-genius.com</div>
           </div>
-          <Image
-            src="/creator-studio/login.png"
-            alt="Fashion Genius Creator Studio sign-in screen"
-            width={1600}
-            height={945}
-            priority
-          />
+         <Image
+  src="/login.png"
+  alt="Fashion Genius Creator Studio sign-in screen"
+  width={1600}
+  height={945}
+  priority
+/>
         </div>
       </section>
 
@@ -122,11 +122,11 @@ export default function CreatorStudioPage() {
           </div>
           <div className={styles.productFrame}>
             <Image
-              src="/creator-studio/try-on.png"
-              alt="Fashion Genius Try-On Studio"
-              width={888}
-              height={504}
-            />
+  src="/try-on.png"
+  alt="Fashion Genius Try-On Studio"
+  width={888}
+  height={504}
+/>
           </div>
         </article>
 
@@ -141,11 +141,11 @@ export default function CreatorStudioPage() {
           </div>
           <div className={styles.resultVisual}>
             <Image
-              src="/creator-studio/collections.png"
-              alt="Saved collections inside Fashion Genius Creator Studio"
-              width={888}
-              height={557}
-            />
+  src="/collections.png"
+  alt="Saved collections inside Fashion Genius Creator Studio"
+  width={888}
+  height={557}
+/>
           </div>
         </article>
       </section>
@@ -191,12 +191,12 @@ export default function CreatorStudioPage() {
         <div className={styles.founderInner}>
           <div className={styles.portraitWrap}>
             <Image
-              src="/creator-studio/caroline.png"
-              alt="Caroline Steiger, Founder & CEO"
-              width={420}
-              height={420}
-              className={styles.portrait}
-            />
+  src="/caroline.png"
+  alt="Caroline Steiger, Founder & CEO"
+  width={420}
+  height={420}
+  className={styles.portrait}
+/>
           </div>
           <div>
             <div className={styles.sectionKicker}>A NOTE FROM THE FOUNDER</div>
@@ -224,11 +224,11 @@ export default function CreatorStudioPage() {
         <div className={styles.qrBlock}>
           <div className={styles.qrFrame}>
             <Image
-              src="/creator-studio/qr-code.jpg"
-              alt="QR code to Fashion Genius Creator Studio"
-              width={320}
-              height={320}
-            />
+  src="/qr-code.jpg"
+  alt="QR code to Fashion Genius Creator Studio"
+  width={320}
+  height={320}
+/>
           </div>
           <a href={studioUrl}>creatorstudio.fashion-genius.com</a>
         </div>
